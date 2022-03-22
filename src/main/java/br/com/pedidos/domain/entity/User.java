@@ -1,4 +1,4 @@
-package br.com.pedidos.entities;
+package br.com.pedidos.domain.entity;
 
 import java.io.Serializable;
 

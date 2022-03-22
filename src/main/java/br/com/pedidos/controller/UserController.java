@@ -1,15 +1,15 @@
-package br.com.pedidos.resources;
+package br.com.pedidos.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.pedidos.entities.User;
+import br.com.pedidos.domain.entity.User;
 
 @RestController
 @RequestMapping(value = "/users")
-public class UserResource {
+public class UserController {
 	
 	@GetMapping
 	public ResponseEntity<User> findAll(){
@@ -19,6 +19,6 @@ public class UserResource {
 		user.setEmail("lucas@gmail.com");
 		user.setPhone("(31) 99437-2780");
 		user.setPassword("1234567e9");
-		return ResponseEntity.ok(user);
+		return ResponseEntity.ok().body(user);
 	}
 }
