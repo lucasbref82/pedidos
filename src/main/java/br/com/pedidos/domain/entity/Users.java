@@ -7,13 +7,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class User implements Serializable{
+@AllArgsConstructor
+@NoArgsConstructor
+public class Users implements Serializable{
 	
 	private static final long serialVersionUID = -2871442045704799223L;
 	
